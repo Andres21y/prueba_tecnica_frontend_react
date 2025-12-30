@@ -1,23 +1,21 @@
 # BeKind - React Frontend Challenge
 Este proyecto es una aplicación web construida con React 18 y TypeScript que gestiona la autenticación de usuarios y la administración de "Acciones" a través de dos APIs en subdominios distintos.
-Tabla de Contenidos
-Instalación y Configuración
-Scripts Disponibles
-Arquitectura del Proyecto
-Stack Tecnológico
-Decisiones Técnicas
-Supuestos y Ambigüedad
-QA Checklist
-Instalación y Configuración
+### Tabla de Contenidos
+- Instalación y Configuración
+- Scripts Disponibles
+- Arquitectura del Proyecto
+- Stack Tecnológico
+- Decisiones Técnicas
+- Supuestos y Ambigüedad
+- QA Checklist
+## Instalación y Configuración
 Requisitos previos
-Node.js (v16 o superior)
-npm o yarn
-Pasos para inicializar localmente
+- Node.js (v16 o superior)
+- administrador de paquetes npm o yarn
+### Pasos para inicializar localmente
 Clonar el repositorio:
-code
-Bash
-git clone https://github.com/tu-usuario/nombre-del-repo.git
-cd nombre-del-repo
+- git clone https://github.com/tu-usuario/nombre-del-repo.git
+- cd nombre-del-repo
 Instalar dependencias:
 code
 Bash
