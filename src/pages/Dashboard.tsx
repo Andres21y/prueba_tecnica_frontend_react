@@ -1,57 +1,132 @@
 import { useNavigate } from "react-router-dom"
-import { useActions } from "../hooks/useActions";
+import { Header } from "../components/Header";
+import styles from '../styles/dashboard.module.css'
+import { SideBar } from "../components/SideBar";
+import { useState } from "react";
+import { SearchBar } from "../components/SearchBar";
+import { icon, clear, edit, update, svg, filter } from '../assets'
+
 
 
 export const Dasboard = () => {
-    const navigate = useNavigate();
-    const { data, loading, error, page, setPage } = useActions(1, 10);
+  const navigate = useNavigate();
+  const [title, setTitle] = useState('Categorias');
 
-    if (error) return <div>Error:{error}</div>;
+  const handleTitle = (value: string) => {
+    setTitle(value)
+  }
 
-    return (
-        <div className="container">
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <h1>Actions</h1>
-                <button onClick={() => navigate('/create-action')}>+ New action</button>
+  const data = [
+    { id: 1, name: 'Foto + Description', icon: icon, state: 'Activo', description: 'Realizar actividad física al menos 30 minutos cada dia', date: 'Abr 3, 2024' },
+    { id: 2, name: 'Foto + Description', icon: icon, state: 'Activo', description: 'Realizar actividad física al menos 30 minutos cada dia', date: 'Abr 3, 2024' },
+    { id: 3, name: 'Foto + Description', icon: icon, state: 'Activo', description: 'Realizar actividad física al menos 30 minutos cada dia', date: 'Abr 3, 2024' },
+    { id: 4, name: 'Foto + Description', icon: icon, state: 'Activo', description: 'Realizar actividad física al menos 30 minutos cada dia', date: 'Abr 3, 2024' },
+    { id: 5, name: 'Foto + Description', icon: icon, state: 'Activo', description: 'Realizar actividad física al menos 30 minutos cada dia', date: 'Abr 3, 2024' },
+    { id: 6, name: 'Foto + Description', icon: icon, state: 'Activo', description: 'Realizar actividad física al menos 30 minutos cada dia', date: 'Abr 3, 2024' },
+    { id: 7, name: 'Foto + Description', icon: icon, state: 'Activo', description: 'Realizar actividad física al menos 30 minutos cada dia', date: 'Abr 3, 2024' },
+    { id: 8, name: 'Foto + Description', icon: icon, state: 'Activo', description: 'Realizar actividad física al menos 30 minutos cada dia', date: 'Abr 3, 2024' },
+    { id: 9, name: 'Foto + Description', icon: icon, state: 'Activo', description: 'Realizar actividad física al menos 30 minutos cada dia', date: 'Abr 3, 2024' },
+  ]
+  return (
+    <div className={styles.container}>
+
+      <Header />
+
+      <div className={styles.content}>
+
+        <SideBar />
+
+        <div className={styles.container_content}>
+          <div className={styles.title}>
+            <span>{title}</span>
+          </div>
+
+          <div className={styles.tapbar}>
+
+            <button
+              className={title === 'Categorias' ? styles.active : ''}
+              onClick={() => handleTitle('Categorias')}
+            >
+              Categorias
+            </button>
+
+            <button
+              className={title === 'Tipos' ? styles.active : ''}
+              onClick={() => handleTitle('Tipos')}>
+              Tipos
+            </button>
+
+            <button
+              className={title === 'Evidencias' ? styles.active : ''}
+              onClick={() => handleTitle('Evidencias')}
+            >
+              Evidencias
+            </button>
+          </div>
+
+          <div className={styles.stats}>
+            <div className={styles.action}>
+              <SearchBar />
+              <div className={styles.filter}>
+                <img src={filter} alt="filterIcon" />
+                <span>Filtros</span>
+              </div>
+              <button className={styles.btnModal}>Crear tipo de categoria</button>
             </div>
-            {
-                loading ? (<p>Loading actions...</p>) : (
-                    <>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Description</th>
-                                    <th>State</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {
-                                    data.length > 0 ? (
-                                        data.map((action) => (
-                                            <tr key={action.id}>
-                                                <td>{action.name}</td>
-                                                <td>{action.description}</td>
-                                                <td>{action.status || "Active"}</td>
-                                            </tr>
-                                        ))
-                                    ) : (
-                                        <tr>
-                                            <td colSpan={3}>There is not actions to show</td>
-                                        </tr>
-                                    )
-                                }
-                            </tbody>
-                        </table>
+            <div className={styles.table}>
+              <table>
+                <thead>
+                  <tr>
+                    <th className={styles.tCategory}>
+                      <span>Nombre de la categoria</span>
+                      <img src={svg} alt="arrows" />
+                    </th>
+                    <th className={styles.tIcon}>
+                      <span>Icono de la categoria</span>
+                      <img src={svg} alt="arrows" />
+                    </th>
+                    <th className={styles.tState}>
+                      <span>Estado</span>
+                      <img src={svg} alt="arrows" />
+                    </th>
+                    <th className={styles.tDescription}>
+                      <span>Descripción</span>
+                      <img src={svg} alt="arrows" />
+                    </th>
+                    <th className={styles.tDate}>
+                      <span>Fechas de Creación</span>
+                      <img src={svg} alt="arrows" />
+                    </th>
+                    <th className={styles.tActions}>Aciones
+                      <img src={svg} alt="arrows" />
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {
+                    data.map((item: any) => (
+                      <tr key={item.id}>
+                        <td style={{ "textAlign": "left" }}>{item.name}</td>
+                        <td><img src={item.icon} alt="icon" /></td>
+                        <td className={styles.tbn_td}><button>{item.state}</button></td>
+                        <td style={{ "textAlign": "left" }}>{item.description}</td>
+                        <td>{item.date}</td>
+                        <td className={styles.actions} >
+                          <img src={edit} alt="editIcon" />
+                          <img src={clear} alt="clearIcon" />
+                          <img src={update} alt="updateIcon" />
+                        </td>
+                      </tr>
+                    ))
+                  }
+                </tbody>
+              </table>
+            </div>
+          </div>
 
-                        <div className="pagination" style={{ marginTop: '1rem' }}>
-                            <button disabled={page === 1} onClick={() => setPage(p => p - 1)}>Before</button>
-                            <span>Pagine {page}</span>
-                            <button onClick={() => setPage(p => p + 1)}>Next</button>
-                        </div>
-                    </>
-                )
-            }
         </div>
-    )
+      </div>
+
+    </div>
+  )
 }

@@ -1,0 +1,19 @@
+.container {
+    background-color: #1E1B4D;
+    width: 1440px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 36px;
+    box-sizing: border-box;
+}
+
+.user {
+    text-align: center;
+    background: #FED639;
+    border-radius: 50%;
+}
+
+.user span{
+    padding: 7px;
+}

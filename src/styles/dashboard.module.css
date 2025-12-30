@@ -1,0 +1,155 @@
+.container {
+    height: 1024px;
+    width: 1440px;
+}
+
+.content {
+    display: flex;
+}
+
+.container_content {
+    flex: 1;
+    background-color: #FAFAFA;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    width: 1124px;
+}
+
+.title span {
+    font-size: 36px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.tapbar {
+    height: fit-content;
+    width: 1124px;
+}
+
+.tapbar>button {
+    height: 48px;
+    border: none;
+    cursor: pointer;
+    padding: 0px 16px;
+    font-size: 16px;
+    font-weight: 400;
+
+}
+
+.active {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.active:focus {
+    border-bottom: 3px solid #000203;
+}
+
+.stats {
+    width: 1121px;
+}
+
+.action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    width: 652px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.btnModal {
+    height: 40px;
+    background-color: #1E1B4D;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+}
+
+thead {
+    height: 48px;
+    background-color: #E4E4E5;
+    border: 1px solid;
+}
+
+td {
+    width: 188px;
+}
+
+
+.actions {
+    display: flex;
+    gap: 10px;
+    height: 40px;
+    justify-content: center;
+}
+
+.actions>img {
+    height: 16px;
+}
+
+.tbn_td {
+    height: 56px;
+    width: 143px;
+    padding: 0px 16px;
+}
+
+.tbn_td>button {
+    width: 118px;
+    border-radius: 4px;
+    background-color: #D2E5D0;
+    padding: 6px 10px;
+    color: #0B8A00;
+    border: 1px solid #0B8A00;
+}
+
+
+th {
+    padding: 0px 16px;
+    text-align: left;
+}
+
+td {
+text-align: center;
+}
+
+th>span {
+    text-align: left;
+}
+
+.tIcon>span {
+    width: 183px;
+}
+
+.tCategory {
+    width: 186px;
+}
+
+.tIcon {
+    width: 183px;
+}
+
+.tState {
+    width: 143px;
+}
+
+.tDescription {
+    width: 345px;
+}
+
+.tDate {
+    width: 147px;
+}
+
+.tActions {
+    width: 117px;
+}

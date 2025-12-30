@@ -19,3 +19,9 @@ export interface PaginatedResponse{
     pageNumber:number;
     pageSize:number;
 }
+
+export interface ActionForm{
+    name:string;
+    description:string;
+    status:string;
+}
