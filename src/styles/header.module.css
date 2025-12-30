@@ -8,12 +8,3 @@
     box-sizing: border-box;
 }
 
-.user {
-    text-align: center;
-    background: #FED639;
-    border-radius: 50%;
-}
-
-.user span{
-    padding: 7px;
-}

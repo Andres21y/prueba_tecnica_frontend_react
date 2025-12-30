@@ -4,9 +4,9 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { apiFetch } from "../api/client";
 import styles from "../styles/login.module.css";
-import { MdOutlineEmail } from "react-icons/md";
-import { PiLock } from "react-icons/pi";
-import { RiEyeOffLine } from "react-icons/ri";
+import eye from '../assets/eye.svg'
+import email from '../assets/email.svg'
+import lock from '../assets/lock.svg'
 
 
 export const Loging = () => {
@@ -61,7 +61,7 @@ export const Loging = () => {
                         <div className={styles.input_container}>
                             <label htmlFor="username">Correo Electrónico*</label>
                             <div className={styles.input_content}>
-                                <MdOutlineEmail />
+                                <img src={email} alt="eyeIcon" />
                                 <input id="username" className={styles.input_email} type='email' {...register("username", { required: true })} placeholder="Ingresar correo" />
                             </div>
                             {errors.username?.message && <span>{errors.username.message as string}</span>}
@@ -70,9 +70,9 @@ export const Loging = () => {
                         <div className={styles.input_container}>
                             <label className={styles.label_login} htmlFor="password">Contraseña*</label>
                             <div className={styles.input_content}>
-                                <PiLock />
+                                <img src={lock} alt="eyeIcon" />
                                 <input id="password" className={styles.input_pass} type='password'{...register("password", { required: true })} placeholder="Ingresa tu contraseña" />
-                                <RiEyeOffLine />
+                                <img src={eye} alt="eyeIcon" />
                             </div>
                             {errors.password?.message && <span>{errors.password.message as string}</span>}
                         </div>
