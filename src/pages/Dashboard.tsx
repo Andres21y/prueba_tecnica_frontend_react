@@ -9,7 +9,7 @@ import { icon, clear, edit, update, svg, filter } from '../assets'
 
 
 export const Dasboard = () => {
-  const navigate = useNavigate();
+
   const [title, setTitle] = useState('Categorias');
 
   const handleTitle = (value: string) => {
