@@ -1,5 +1,9 @@
 # BeKind - React Frontend Challenge
 Este proyecto es una aplicación web construida con React 18 y TypeScript que gestiona la autenticación de usuarios y la administración de "Acciones" a través de dos APIs en subdominios distintos.
+<img width="1062" height="517" alt="bekindLogin" src="https://github.com/user-attachments/assets/0e7b4f84-8c3b-4ce1-8c4c-10202779f36e" />
+<img width="1086" height="769" alt="bekinddash" src="https://github.com/user-attachments/assets/02c3903d-c368-4c28-a4f2-e1b18ed9f2a9" />
+
+
 ### Tabla de Contenidos
 - Instalación y Configuración
 - Scripts Disponibles
@@ -67,5 +71,5 @@ QA_CHECKLIST.md
 Incluye pruebas de flujo exitoso de login, validación de formularios, persistencia de sesión y manejo de errores de red.
 
 
-Candidato:  Andres Dario Cordoba 😊
+Candidato:  Andres Dario Cordoba 😊I love this!
 
