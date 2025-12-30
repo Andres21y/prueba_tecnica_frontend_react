@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom"
 import { Header } from "../components/Header";
 import styles from '../styles/dashboard.module.css'
 import { SideBar } from "../components/SideBar";
