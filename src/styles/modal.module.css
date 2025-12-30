@@ -40,8 +40,6 @@ input {
     box-sizing: border-box;
 }
 
-.content_input {}
-
 .content_input input {
     height: 40px;
     font-size: 16px;
